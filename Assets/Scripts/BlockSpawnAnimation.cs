@@ -7,14 +7,14 @@ using Random = UnityEngine.Random;
 
 public class BlockSpawnAnimation : MonoBehaviour
 {
-    private float height=17;
+    private float height=15;
     private float speed;
     private float targetHeight;
     private void Awake()
     {
         targetHeight = transform.position.y;
         transform.position = transform.position + Vector3.up * height;
-        speed = Random.value * 3 + 3;
+        speed = Random.value * 3 + 5;
     }
 
     // Start is called before the first frame update

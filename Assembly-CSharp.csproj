@@ -51,12 +51,18 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\BlockSpawnAnimation.cs" />
-     <Compile Include="Assets\Scripts\ControlManager.cs" />
-     <Compile Include="Assets\Scripts\GameEvents.cs" />
+     <Compile Include="Assets\Scripts\Main\ControlManager.cs" />
+     <Compile Include="Assets\Scripts\Main\GameEvents.cs" />
+     <Compile Include="Assets\Scripts\Main\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Main\LevelLoader.cs" />
+     <Compile Include="Assets\Scripts\Main\MenuManager.cs" />
+     <Compile Include="Assets\Scripts\Main\Player.cs" />
      <Compile Include="Assets\Scripts\Map.cs" />
-     <Compile Include="Assets\Scripts\Player.cs" />
-     <Compile Include="Assets\Scripts\SpikeTrap.cs" />
+     <Compile Include="Assets\Scripts\Traps\Deadly.cs" />
+     <Compile Include="Assets\Scripts\Traps\SpikeTrap.cs" />
+     <Compile Include="Assets\Scripts\Traps\SpinningBladeTrap.cs" />
      <Compile Include="Assets\Scripts\UI\LevelCompleteMenu.cs" />
+     <Compile Include="Assets\Scripts\UI\LevelManager.cs" />
      <Compile Include="Assets\Scripts\bochka.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>D:/Unity/Projects/Dungeon&apos;s/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
