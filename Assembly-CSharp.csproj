@@ -51,6 +51,9 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\BlockSpawnAnimation.cs" />
+     <Compile Include="Assets\Scripts\Levels\Level.cs" />
+     <Compile Include="Assets\Scripts\Levels\LevelSelectButton.cs" />
+     <Compile Include="Assets\Scripts\Levels\LevelsManager.cs" />
      <Compile Include="Assets\Scripts\Main\ControlManager.cs" />
      <Compile Include="Assets\Scripts\Main\GameEvents.cs" />
      <Compile Include="Assets\Scripts\Main\GameManager.cs" />

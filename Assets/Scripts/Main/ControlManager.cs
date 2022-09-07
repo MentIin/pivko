@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ControlManager : MonoBehaviour
 {
@@ -89,6 +90,13 @@ public class ControlManager : MonoBehaviour
             GameEvents.current.NextTurn();
         }
         
+    }
+
+
+
+    public void ReturnToLevelSelect()
+    {
+        SceneManager.LoadScene("SelectLevel");
     }
     
 }

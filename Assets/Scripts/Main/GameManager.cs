@@ -19,8 +19,16 @@ public class GameManager : MonoBehaviour
 
     private void Complete()
     {
+        LevelsManager.LevelComplete(LevelLoader.S.level);
+        LevelsManager.Save();
         //PlayerPrefs.SetInt("levelId", PlayerPrefs.GetInt("levelId") + 1);
-        PlayerPrefs.SetInt("levelId", Random.Range(0, 3));
+        //PlayerPrefs.SetInt("levelId", Random.Range(0, 3));
+        //SceneManager.LoadSceneAsync("SelectLevel");
+    }
+
+    public void NextLevel()
+    {
+        PlayerPrefs.SetInt("levelId", LevelLoader.S.level + 1);
         SceneManager.LoadScene("GameScene");
     }
     

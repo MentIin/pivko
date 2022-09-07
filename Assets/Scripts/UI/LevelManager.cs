@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField] private GameObject[] levels;
     public static LevelManager S;
     public int currentLevelId = 0;
     private void Awake()
@@ -17,9 +16,8 @@ public class LevelManager : MonoBehaviour
 
     public void LoadLevel(int id)
     {
-        if (id + 1 > levels.Length) return;
         SceneManager.LoadScene("GameScene");
-        GameObject lvl = Instantiate(levels[id]);
+        PlayerPrefs.SetInt("levelId", id);
         currentLevelId = id;
     }
 }

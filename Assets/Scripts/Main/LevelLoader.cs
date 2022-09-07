@@ -6,12 +6,13 @@ public class LevelLoader : MonoBehaviour
 {
     [SerializeField] private GameObject[] levelPrefabs;
     public int level=0;
+    public static LevelLoader S;
 
     [SerializeField] private bool debug=false;
     // Start is called before the first frame update
     void Start()
     {
-        
+        S = this;
         if (PlayerPrefs.HasKey("levelId") && !debug)
         {
             level = PlayerPrefs.GetInt("levelId");
