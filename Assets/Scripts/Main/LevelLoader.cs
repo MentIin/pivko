@@ -10,7 +10,7 @@ public class LevelLoader : MonoBehaviour
 
     [SerializeField] private bool debug=false;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         S = this;
         if (PlayerPrefs.HasKey("levelId") && !debug)

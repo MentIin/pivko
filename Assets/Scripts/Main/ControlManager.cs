@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class ControlManager : MonoBehaviour
 {
-    [SerializeField] private Player player;
+    private Player player;
 
     private float verInp = 0f;
 
@@ -19,11 +19,15 @@ public class ControlManager : MonoBehaviour
 
     private float holdingTime = 0f;
     private float necessaryHoldingTime = 1f;
-    
-    
-    void Start()
+
+    private void Awake()
     {
         
+    }
+
+    void Start()
+    {
+        player = GameObject.FindWithTag("Player").GetComponent<Player>();
     }
 
     // Update is called once per frame

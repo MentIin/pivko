@@ -47,6 +47,12 @@ public static class LevelsManager
         levels[id].Completed = true;
         UnlockNewLevel();
     }
+    public static void LevelComplete(int id, int stars)
+    {
+        levels[id].Completed = true;
+        levels[id].Stars = stars;
+        UnlockNewLevel();
+    }
 
     private static void UnlockNewLevel()
     {
