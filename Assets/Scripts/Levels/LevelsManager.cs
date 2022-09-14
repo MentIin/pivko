@@ -44,11 +44,25 @@ public static class LevelsManager
 
     public static void LevelComplete(int id)
     {
+        if (levels[id].Completed) return;
         levels[id].Completed = true;
         UnlockNewLevel();
     }
     public static void LevelComplete(int id, int stars)
     {
+        if (levels[id].Completed )
+        {
+            if (levels[id].Stars > 0)
+            {
+                
+            }
+            else
+            {
+                levels[id].Stars = stars;
+            }
+            
+            return;
+        }
         levels[id].Completed = true;
         levels[id].Stars = stars;
         UnlockNewLevel();

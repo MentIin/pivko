@@ -12,6 +12,7 @@ public class LevelLoader : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        if (debug) return;
         S = this;
         if (PlayerPrefs.HasKey("levelId") && !debug)
         {

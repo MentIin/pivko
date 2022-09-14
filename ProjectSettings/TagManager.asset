@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Wall
   - Spike
+  - Box
+  - Collectibles
   layers:
   - Default
   - TransparentFX

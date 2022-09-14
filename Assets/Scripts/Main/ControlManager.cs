@@ -18,7 +18,7 @@ public class ControlManager : MonoBehaviour
     private float sensetive = 15f;
 
     private float holdingTime = 0f;
-    private float necessaryHoldingTime = 1f;
+    private float necessaryHoldingTime = 0.5f;
 
     private void Awake()
     {
@@ -100,7 +100,7 @@ public class ControlManager : MonoBehaviour
 
     public void ReturnToLevelSelect()
     {
-        SceneManager.LoadScene("SelectLevel");
+        Transitor.S.Load("SelectLevel");
     }
     
 }

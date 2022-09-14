@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class LevelSelectButton : MonoBehaviour
 {
+    private Animator _animator;
     public int levelId=0;
     private bool locked = true;
     private int stars = 0;
@@ -15,9 +16,13 @@ public class LevelSelectButton : MonoBehaviour
     public void Load()
     {
         if (locked) return;
-        SceneManager.LoadScene("GameScene");
-        PlayerPrefs.SetInt("levelId", levelId);
+        Transitor.S.LoadLevel(levelId);
         
+    }
+
+    private void Awake()
+    {
+        _animator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -27,18 +32,14 @@ public class LevelSelectButton : MonoBehaviour
         
         if (locked)
         {
-            gameObject.SetActive(false);
+            _animator.SetBool("locked", true);
         }
         else
         {
-            if (level.Stars == 1)
-            {
-                starIndicator.SetActive(true);
-            }
-            else
-            {
-                starIndicator.SetActive(false);
-            }
+            _animator.SetBool("locked", false);
+
+            _animator.SetInteger("stars", level.Stars);
+
         }
     }
 }

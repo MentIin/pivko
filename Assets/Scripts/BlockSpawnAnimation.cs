@@ -13,7 +13,7 @@ public class BlockSpawnAnimation : MonoBehaviour
     private void Awake()
     {
         targetHeight = transform.position.y;
-        transform.position = transform.position + Vector3.up * height;
+        //transform.position = transform.position + Vector3.up * height;
         speed = Random.value * 3 + 5;
     }
 
@@ -24,7 +24,7 @@ public class BlockSpawnAnimation : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void Updat()
     {
         float y = Mathf.Cos(Time.timeSinceLevelLoad / 5 * speed) * height;
         transform.position = new Vector3(transform.position.x, y, transform.position.z);

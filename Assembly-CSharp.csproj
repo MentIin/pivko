@@ -62,6 +62,9 @@
      <Compile Include="Assets\Scripts\Main\Player.cs" />
      <Compile Include="Assets\Scripts\Map.cs" />
      <Compile Include="Assets\Scripts\Rotate.cs" />
+     <Compile Include="Assets\Scripts\Stats.cs" />
+     <Compile Include="Assets\Scripts\Transitor.cs" />
+     <Compile Include="Assets\Scripts\Traps\Box.cs" />
      <Compile Include="Assets\Scripts\Traps\Deadly.cs" />
      <Compile Include="Assets\Scripts\Traps\SpikeTrap.cs" />
      <Compile Include="Assets\Scripts\Traps\SpinningBladeTrap.cs" />
@@ -87,17 +90,26 @@
  <Reference Include="Unity.Timeline">
  <HintPath>D:/Unity/Projects/Dungeon&apos;s/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.Postprocessing.Editor">
+ <HintPath>D:/Unity/Projects/Dungeon&apos;s/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Notifications.iOS">
  <HintPath>D:/Unity/Projects/Dungeon&apos;s/Library/ScriptAssemblies/Unity.Notifications.iOS.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
  <HintPath>D:/Unity/Projects/Dungeon&apos;s/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.2D.Sprite.Editor">
+ <HintPath>D:/Unity/Projects/Dungeon&apos;s/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Notifications.Android">
  <HintPath>D:/Unity/Projects/Dungeon&apos;s/Library/ScriptAssemblies/Unity.Notifications.Android.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Mobile.AndroidLogcat.Editor">
  <HintPath>D:/Unity/Projects/Dungeon&apos;s/Library/ScriptAssemblies/Unity.Mobile.AndroidLogcat.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Postprocessing.Runtime">
+ <HintPath>D:/Unity/Projects/Dungeon&apos;s/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VisualStudio.Editor">
  <HintPath>D:/Unity/Projects/Dungeon&apos;s/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
@@ -110,12 +122,6 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>D:/Unity/Projects/Dungeon&apos;s/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Postprocessing.Editor">
- <HintPath>D:/Unity/Projects/Dungeon&apos;s/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Postprocessing.Runtime">
- <HintPath>D:/Unity/Projects/Dungeon&apos;s/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine">
  <HintPath>D:/Unity/2019.4.31f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

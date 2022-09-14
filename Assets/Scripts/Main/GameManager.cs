@@ -36,8 +36,7 @@ public class GameManager : MonoBehaviour
 
     public void NextLevel()
     {
-        PlayerPrefs.SetInt("levelId", LevelLoader.S.level + 1);
-        SceneManager.LoadScene("GameScene");
+        Transitor.S.LoadLevel(LevelLoader.S.level + 1);
     }
 
     public void CollectStar()

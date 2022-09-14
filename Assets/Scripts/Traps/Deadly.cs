@@ -22,5 +22,9 @@ public class Deadly : MonoBehaviour
         {
             Player.current.Die();
         }
+        if (other.gameObject.CompareTag("Box"))
+        {
+            other.gameObject.GetComponent<Box>().Die();
+        }
     }
 }

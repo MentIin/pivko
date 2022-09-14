@@ -22,10 +22,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (CheckToward())
-        {
-            
-        }
+        
     }
 
     public void Move(int x, int y)
@@ -39,7 +36,7 @@ public class Player : MonoBehaviour
         if (y == -1) rot = 0f;
         
         transform.rotation = Quaternion.Euler(0f, rot, 0f);
-        if (!CheckToward())
+        if (!CheckToward(x, y))
         {
             transform.position = transform.position + new Vector3(x, 0, y);
             _anim.SetTrigger("move");
@@ -51,7 +48,7 @@ public class Player : MonoBehaviour
         
     }
 
-    private bool CheckToward()
+    private bool CheckToward(int x, int y)
     {
         Vector3 center = _collider.bounds.center;
         RaycastHit info;
@@ -62,6 +59,11 @@ public class Player : MonoBehaviour
             if (info.collider.CompareTag("Wall"))
             {
                 return true;
+            }
+
+            if (info.collider.CompareTag("Box"))
+            {
+                return !info.collider.GetComponent<Box>().Move(x, y);
             }
             
         }

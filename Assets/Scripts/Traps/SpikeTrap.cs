@@ -38,6 +38,11 @@ public class SpikeTrap : MonoBehaviour
         {
             Player.current.Die();
         }
+
+        if (other.gameObject.CompareTag("Box"))
+        {
+            other.gameObject.GetComponent<Box>().Die();
+        }
     }
     private void OnTriggerStay(Collider other)
     {
@@ -46,6 +51,10 @@ public class SpikeTrap : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Player.current.Die();
+        }
+        if (other.gameObject.CompareTag("Box"))
+        {
+            other.gameObject.GetComponent<Box>().Die();
         }
     }
 }
