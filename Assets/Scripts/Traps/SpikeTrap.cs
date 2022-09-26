@@ -29,32 +29,5 @@ public class SpikeTrap : MonoBehaviour
         active = !active;
         _animator.SetBool("active", active);
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (!active) return;
-
-        if (other.gameObject.CompareTag("Player"))
-        {
-            Player.current.Die();
-        }
-
-        if (other.gameObject.CompareTag("Box"))
-        {
-            other.gameObject.GetComponent<Box>().Die();
-        }
-    }
-    private void OnTriggerStay(Collider other)
-    {
-        if (!active) return;
-
-        if (other.gameObject.CompareTag("Player"))
-        {
-            Player.current.Die();
-        }
-        if (other.gameObject.CompareTag("Box"))
-        {
-            other.gameObject.GetComponent<Box>().Die();
-        }
-    }
+    
 }

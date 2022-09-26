@@ -17,12 +17,14 @@ public class ControlManager : MonoBehaviour
     private Vector2 starTouchPos;
     private float sensetive = 15f;
 
-    private float holdingTime = 0f;
-    private float necessaryHoldingTime = 0.5f;
+    [HideInInspector]public float holdingTime = 0f;
+    [HideInInspector]public float necessaryHoldingTime = 0.5f;
+
+    static public ControlManager current;
 
     private void Awake()
     {
-        
+        current = this;
     }
 
     void Start()
@@ -86,6 +88,10 @@ public class ControlManager : MonoBehaviour
             {
                 holdingTime += Time.deltaTime;
             }
+        }
+        else
+        {
+            holdingTime = 0f;
         }
 
         if (holdingTime >= necessaryHoldingTime)

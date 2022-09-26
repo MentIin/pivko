@@ -21,8 +21,11 @@ public class Deadly : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Player.current.Die();
+        }else if (other.gameObject.CompareTag("Enemy"))
+        {
+            other.GetComponent<Enemy>().Die();
         }
-        if (other.gameObject.CompareTag("Box"))
+        else if (other.gameObject.CompareTag("Box"))
         {
             other.gameObject.GetComponent<Box>().Die();
         }

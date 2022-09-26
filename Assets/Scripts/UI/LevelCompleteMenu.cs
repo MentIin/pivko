@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelCompleteMenu : MonoBehaviour
 {
     private Animator _animator;
+
+    [SerializeField] private Text levelNameText;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,5 +24,6 @@ public class LevelCompleteMenu : MonoBehaviour
     void Show()
     {
         _animator.SetTrigger("show");
+        levelNameText.text = levelNameText.text + (LevelLoader.S.level + 1);
     }
 }

@@ -50,7 +50,10 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Ahmad Gamal\Smart FPS Counter\Scripts\FPSCounter.cs" />
+     <Compile Include="Assets\Ahmad Gamal\Smart FPS Counter\Scripts\test.cs" />
      <Compile Include="Assets\Scripts\BlockSpawnAnimation.cs" />
+     <Compile Include="Assets\Scripts\Decor\Torch.cs" />
      <Compile Include="Assets\Scripts\Levels\Level.cs" />
      <Compile Include="Assets\Scripts\Levels\LevelSelectButton.cs" />
      <Compile Include="Assets\Scripts\Levels\LevelsManager.cs" />
@@ -66,12 +69,39 @@
      <Compile Include="Assets\Scripts\Transitor.cs" />
      <Compile Include="Assets\Scripts\Traps\Box.cs" />
      <Compile Include="Assets\Scripts\Traps\Deadly.cs" />
+     <Compile Include="Assets\Scripts\Traps\Enemy.cs" />
+     <Compile Include="Assets\Scripts\Traps\SpikeGate.cs" />
+     <Compile Include="Assets\Scripts\Traps\SpikeGateTrigger.cs" />
      <Compile Include="Assets\Scripts\Traps\SpikeTrap.cs" />
      <Compile Include="Assets\Scripts\Traps\SpinningBladeTrap.cs" />
      <Compile Include="Assets\Scripts\Traps\Star.cs" />
+     <Compile Include="Assets\Scripts\Traps\Zombie.cs" />
+     <Compile Include="Assets\Scripts\UI\FingerHoldIndicator.cs" />
      <Compile Include="Assets\Scripts\UI\LevelCompleteMenu.cs" />
-     <Compile Include="Assets\Scripts\UI\LevelManager.cs" />
+     <Compile Include="Assets\Scripts\UI\MainCamera.cs" />
      <Compile Include="Assets\Scripts\bochka.cs" />
+     <None Include="Assets\Ahmad Gamal\Smart FPS Counter\TextMesh Pro\Shaders\TMPro.cginc" />
+     <None Include="Assets\Ahmad Gamal\Smart FPS Counter\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\Ahmad Gamal\Smart FPS Counter\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+     <None Include="Assets\Ahmad Gamal\Smart FPS Counter\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+     <None Include="Assets\Ahmad Gamal\Smart FPS Counter\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+     <None Include="Assets\Ahmad Gamal\Smart FPS Counter\Fonts\Roboto\LICENSE.txt" />
+     <None Include="Assets\Ahmad Gamal\Smart FPS Counter\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\Ahmad Gamal\Smart FPS Counter\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+     <None Include="Assets\Ahmad Gamal\Smart FPS Counter\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <None Include="Assets\Ahmad Gamal\Smart FPS Counter\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+     <None Include="Assets\Ahmad Gamal\Smart FPS Counter\TextMesh Pro\Shaders\TMP_SDF.shader" />
+     <None Include="Assets\Ahmad Gamal\Smart FPS Counter\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+     <None Include="Assets\Ahmad Gamal\Smart FPS Counter\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\Ahmad Gamal\Smart FPS Counter\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+     <None Include="Assets\Ahmad Gamal\Smart FPS Counter\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+     <None Include="Assets\Ahmad Gamal\Smart FPS Counter\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\Ahmad Gamal\Smart FPS Counter\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\Ahmad Gamal\Smart FPS Counter\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+     <None Include="Assets\Ahmad Gamal\Smart FPS Counter\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+     <None Include="Assets\Ahmad Gamal\Smart FPS Counter\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+     <None Include="Assets\Ahmad Gamal\Smart FPS Counter\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+     <None Include="Assets\Ahmad Gamal\Smart FPS Counter\TextMesh Pro\Shaders\TMP_Sprite.shader" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>D:/Unity/Projects/Dungeon&apos;s/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
