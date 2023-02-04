@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Zombie : Enemy
 {
-    private Animator _animator;
-    private Collider _collider;
+    
+    [SerializeField] private ParticleSystem _dieParticles;
+    
 
     private void Awake()
     {
@@ -27,7 +29,7 @@ public class Zombie : Enemy
         
     }
 
-    private void MakeTurn()
+    protected override void MakeTurn()
     {
         Vector2Int dir = CheckAround();
         Move(dir.x, dir.y);
@@ -58,29 +60,22 @@ public class Zombie : Enemy
     private RaycastHit Check(int x, int y, float distance)
     {
         Vector3 center = _collider.bounds.center;
-        RaycastHit info;
+        
         Vector3 dir = new Vector3(x, 0, y);
-        Physics.BoxCast(center, transform.localScale / 10f, dir, out info, Quaternion.identity, distance);
-        return info;
-    }
-    private bool CheckToward(int x, int y)
-    {
-        RaycastHit info = Check(x, y, 1);
+        RaycastHit[] hits = Physics.BoxCastAll(center, transform.localScale / 10f, dir, Quaternion.identity, distance);
+        var sortedList = hits.Cast<RaycastHit>();
+        sortedList = sortedList.OrderBy(item => item.distance);
 
-        if (info.collider)
+
+        foreach (var hit in sortedList)
         {
-            if (info.collider.CompareTag("Wall"))
+            if (stopTags.Contains(hit.collider.tag))
             {
-                return true;
+                return hit;
             }
-
-            if (info.collider.CompareTag("Box"))
-            {
-                return !info.collider.GetComponent<Box>().Move(x, y);
-            }
-            
         }
-        return false;
+        RaycastHit info = new RaycastHit();
+        return info;
     }
 
     private Vector2Int CheckAround()
@@ -106,5 +101,10 @@ public class Zombie : Enemy
     private void OnDestroy()
     {
         GameEvents.current.OnNextTurn -= MakeTurn;
+
+        _dieParticles.transform.SetParent(null);
+        _dieParticles.Play();
+        Destroy(_dieParticles.gameObject, 3f);
+        
     }
 }

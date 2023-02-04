@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class LevelLoader : MonoBehaviour
@@ -12,6 +13,7 @@ public class LevelLoader : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        SetSettings();
         if (debug) return;
         S = this;
         if (PlayerPrefs.HasKey("levelId") && !debug)
@@ -31,5 +33,11 @@ public class LevelLoader : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void SetSettings()
+    {
+        int FPS = 60;
+        Application.targetFrameRate = FPS;
     }
 }

@@ -65,12 +65,12 @@ public class Box : MonoBehaviour
                     return true;
                 }
     
-                if (info.collider.CompareTag("Box"))
+                if (info.collider.CompareTag("Box") || info.collider.CompareTag("Enemy"))
                 {
                     //return !info.collider.GetComponent<Box>().Move(x, y);
                     return true;
                 }
-                if (info.collider.CompareTag("Collectibles"))
+                if (info.collider.CompareTag("Collectibles") || info.collider.CompareTag("Target"))
                 {
                     //return !info.collider.GetComponent<Box>().Move(x, y);
                     return true;

@@ -35,7 +35,7 @@ public class SpikeGateTrigger : MonoBehaviour
 
     private bool Check()
     {
-        Collider[] colliders = Physics.OverlapSphere(transform.position, 0.1f);
+        Collider[] colliders = Physics.OverlapSphere(transform.position, 0.2f);
  
         foreach (var col in colliders)
         {
@@ -65,4 +65,5 @@ public class SpikeGateTrigger : MonoBehaviour
             SetActive(false);
         }
     }
+    
 }
